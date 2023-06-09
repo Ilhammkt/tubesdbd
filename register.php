@@ -67,7 +67,7 @@
 
         } else {
             // Terjadi kesalahan saat menyimpan data, tampilkan pesan error
-            echo "Registrasi gagal. Silakan coba lagi.";
+            echo "Registrasi gagal";
         }
     }
     ?>
