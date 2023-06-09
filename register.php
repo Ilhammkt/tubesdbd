@@ -9,7 +9,7 @@
 
 <style>
     body {
-        background-image: url(css/bg2.svg);
+        background-image: url(css/bglogreg.svg);
         background-repeat: no-repeat;
         background-size: cover;
     }

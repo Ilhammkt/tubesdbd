@@ -9,8 +9,7 @@
 
 <style>
     body {
-        background-image: url(css/bg2.svg);
-        /* Ganti dengan jalur/gambar yang sesuai */
+        background-image: url(css/bglogreg.svg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -59,9 +58,9 @@
         if (mysqli_num_rows($result) > 0) {
             // Data pengguna ditemukan, set session dan redirect ke halaman lain
             $_SESSION['username'] = $username;
-            header('Location: admin/halaman.php');
+            header('Location: admin/halamanuser.php');
 
-            
+
         } else {
             // Login gagal
             echo "<p>Login gagal</p>";
