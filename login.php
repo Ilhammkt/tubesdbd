@@ -35,12 +35,12 @@
     </div>
 
     <div class="register-container">
-        <p class="reg">
+        <p>
             Tidak punya akun? <a href="register.php" class="warna1">Mendaftar ke Kantin Kuy!</a>
         </p>
     </div>
 
-    <div class="shape"></div>
+    <div class="line"></div>
 
     <?php
     session_start();
@@ -58,8 +58,7 @@
         if (mysqli_num_rows($result) > 0) {
             // Data pengguna ditemukan, set session dan redirect ke halaman lain
             $_SESSION['username'] = $username;
-            header('Location: admin/halamanuser.php');
-
+            header('Location: halamanuser.php');
 
         } else {
             // Login gagal

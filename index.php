@@ -8,11 +8,11 @@
 </head>
 
 <style>
-body {
-    background-image: url(css/bgawal.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    body {
+        background-image: url(css/bgawal.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 </style>
 
 <body>

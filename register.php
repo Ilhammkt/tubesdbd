@@ -16,15 +16,6 @@
 </style>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><img class="logo" src="css/logo.png"></li>
-            <li><a href="index.php">Beranda</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Produk</a></li>
-            <li><a href="#">Kontak</a></li>
-        </ul>
-    </div>
     <img src="css/enak2.png" class="image6">
     <div class="form-container">
         <h2 class="font">
