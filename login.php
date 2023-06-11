@@ -63,12 +63,12 @@
             if (strcmp($user_data['type'],"admin") == 0) {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: admin/halamanadmin.php');
+                header('Location: admin/dashboard_admin.php');
             }
             else {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: user/halamanuser.php');
+                header('Location: user/dashboard_user.php');
             }
 
         } else {

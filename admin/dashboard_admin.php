@@ -2,34 +2,33 @@
 
 <?php
 include_once('../config.php');
+session_start();
+$result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
 ?>
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kantin Kuy!</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Dasboard - Admin</title>
 </head>
-<body class="container">
-    <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <h2> <img src="C:\xampp\htdocs\phpdasar\tubesdbd\admin\logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    BANGGGG PUSINGGG BANG admin ini</h2>
-                    <?php
-                    session_start();
-                    print_r($_SESSION);
-                    ?>
-                </a>
-             </div>
-        </nav>
-    </header>
-    <main></main>
-    <footer></footer>
+<body>
+    <a href="tambah_makanan.php">Tambah Makanan.</a></br>
+    <table width='70%' border=1>
+
+    <tr>
+        <th>id</th> <th>nama</th> <th>decs</th> <th>id_cate</th> <th>harga</th> <th>stok</th> <th>Update</th>
+    </tr>
+    <?php
+    while($data = mysqli_fetch_array($result)) {
+        echo "<tr>";
+        echo "<td>".$data['id_makanan']."</td>";
+        echo "<td>".$data['nama']."</td>";
+        echo "<td>".$data['decs']."</td>";
+        echo "<td>".$data['id_category']."</td>";
+        echo "<td>".$data['harga']."</td>";
+        echo "<td>".$data['stok']."</td>";
+        echo "<td><a href='edit.php?id=$data[id_makanan]'>Edit</a> | <a href='delete.php?id=$data[id_makanan]'>Delete</a></td></tr>";
+    }
+    ?>
+    </table>
 </body>
 </html>
