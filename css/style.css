@@ -298,29 +298,9 @@
 }
 
 .login-container {
-    <<<<<<< HEAD
     position: fixed;
     top: 75%;
     right: 7.5%;
-=======
-    position: fixed;
-    top: 75%;
-    right: 7.5%;
-    transform: translateY(-50%);
-}
-
-.login-container p {
-    color: #278700;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.register-container {
-    position: fixed;
-    top: 75%;
-    right: 8.3%;
->>>>>>> 773b031993d1b0db0f637c9f34d702c18d1415f0
     transform: translateY(-50%);
 }
 
