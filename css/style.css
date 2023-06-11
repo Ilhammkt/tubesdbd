@@ -121,7 +121,7 @@
 .image6 {
     max-width: 850px;
     max-height: 850px;
-    position: absolute;
+    position: fixed;
     top: 65%;
     right: 60%;
     transform: translateY(-50%);
@@ -230,7 +230,7 @@
 .form-container {
     position: fixed;
     top: 50%;
-    right: 9%;
+    right: 7%;
     transform: translateY(-50%);
     width: 350px;
     margin: 10px auto;
@@ -238,17 +238,29 @@
 }
 
 .font {
-    width: 400px;
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
-    font-weight: 5000;
 }
 
-.warna1 {
-    color: #ffffff;
+.font h2 {
+    position: fixed;
+    top: 33%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: 400px;
+}
+
+.font h3 {
+    position: fixed;
+    top: 33%;
+    right: 3.2%;
+    transform: translateY(-50%);
+    font-size: 33px;
+    width: 400px;
 }
 
 .warna2 {
+    font-weight: 600;
     color: #278700;
 }
 
@@ -285,15 +297,25 @@
     background-color: #278700;
 }
 
-.register-container {
+.login-container {
     position: fixed;
     top: 75%;
-    right: 10%;
+    right: 7.5%;
     transform: translateY(-50%);
 }
 
-.register-container p a :hover {
-    background-color: #278700;
+.login-container p {
+    color: #278700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.register-container {
+    position: fixed;
+    top: 75%;
+    right: 8.3%;
+    transform: translateY(-50%);
 }
 
 .register-container p {
@@ -303,10 +325,12 @@
     font-weight: 300;
 }
 
+
+
 .line {
     position: fixed;
     top: 70.5%;
-    right: 9.5%;
+    right: 7%;
     transform: translateY(-50%);
     width: 350px;
     height: 1px;
@@ -387,4 +411,3 @@
     border-radius:50%;
     filter: blur(90px);
 }
-

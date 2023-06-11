@@ -10,7 +10,8 @@
 
 <style>
     body {
-        background-image: url(css/bglogreg.svg);
+        background-image: url(css/bg2.svg);
+        /* Ganti dengan jalur/gambar yang sesuai */
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -37,13 +38,13 @@
         </form>
     </div>
 
-    <div class="login-container">
-        <p>
-            Tidak punya akun? <a href="register.php" class="text-white">Mendaftar ke Kantin Kuy!</a>
+    <div class="register-container">
+        <p class="reg">
+            Tidak punya akun? <a href="register.php" class="warna1">Mendaftar ke Kantin Kuy!</a>
         </p>
     </div>
 
-    <div class="line"></div>
+    <div class="shape"></div>
 
     <?php
     session_start();
@@ -58,11 +59,20 @@
         $result = mysqli_query($koneksi, $query);
 
         // Memeriksa hasil query
-        if (mysqli_num_rows($result) > 0) {
-            // Data pengguna ditemukan, set session dan redirect ke halaman lain
-            $_SESSION['username'] = $username;
-            header('Location: halamanuser.php');
+        if ($user_data = mysqli_fetch_array($result) /*mysqli_num_rows($result) > 0*/) {
+            // Data pengguna ditemukan, set session dan redirect ke halaman 
+            if (strcmp($user_data['type'],"admin") == 0) {
+                $_SESSION['username'] = $user_data['username'];
+                $_SESSION['id'] = $user_data['id'];
+                header('Location: admin/dashboard_admin.php');
+            }
+            else {
+                $_SESSION['username'] = $user_data['username'];
+                $_SESSION['id'] = $user_data['id'];
+                header('Location: user/dashboard_user.php');
+            }
 
+            
         } else {
             ?>
             <div class="alert alert-warning col-2 mt-3 ms-3" role="alert">

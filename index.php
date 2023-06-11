@@ -8,11 +8,11 @@
 </head>
 
 <style>
-    body {
-        background-image: url(css/bgawal.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+body {
+    background-image: url(css/bg1.svg); /* Ganti dengan jalur/gambar yang sesuai */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 
 <body>
