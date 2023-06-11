@@ -1,8 +1,8 @@
 .navbar {
     position: fixed;
     top: 3%;
-    right: 8%;
-    transform: translateX(-60%);
+    left: 10%;
+    transform: translateX(+80%);
     padding: 0px;
     float: left;
     margin-left: 100px;
@@ -15,9 +15,13 @@
     overflow: hidden;
 }
 
-.navbar .logo {
+.logo {
+    position: fixed;
+    top: 3%;
+    left: 11%;
+    transform: translateX(-60%);
     display: inline-block;
-    width: 60px; 
+    width: 80px; 
     height: auto;
 }
 
@@ -117,7 +121,7 @@
 .image6 {
     max-width: 850px;
     max-height: 850px;
-    position: absolute;
+    position: fixed;
     top: 65%;
     right: 60%;
     transform: translateY(-50%);
@@ -134,20 +138,45 @@
 
 .title h1 {
     position: absolute;
-    top: 20%;
-    right: 60%;
+    top: 22%;
+    right: 54.9%;
     transform: translateX(-50%);
     color: #278700;
-    font-size: 65px;
+    font-size: 75px;
 }
 
 .title h2 {
     position: absolute;
-    top: 29%;
-    right: 68.8%;
+    top: 32%;
+    right: 68.7%;
     transform: translateX(-50%);
     color: #BF2528;
     font-size: 35px;
+}
+
+.title h3 {
+    position: absolute;
+    top: 23%;
+    left: 17%;
+    transform: translateX(-50%);
+    color: #010B08;
+    font-size: 80px;
+}
+.title h4 {
+    position: absolute;
+    top: 29%;
+    left: 23.9%;
+    transform: translateX(-50%);
+    color: #010B08;
+    font-size: 80px;
+}
+.title h5 {
+    position: absolute;
+    top: 42.3%;
+    left: 23.2%;
+    transform: translateX(-50%);
+    color: #278700;
+    font-size: 50px;
 }
 
 .title p {
@@ -180,11 +209,28 @@
     border-radius: 20px;
 }
 
+.title a1 {
+    position: absolute;
+    top: 600%;
+    left: 16%;
+    transform: translateX(-100%);
+    float: left;
+    margin-top: 10px;
+    margin-left:auto;
+    background-color: #278700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
 /*login*/
 .form-container {
     position: fixed;
     top: 50%;
-    right: 9%;
+    right: 7%;
     transform: translateY(-50%);
     width: 350px;
     margin: 10px auto;
@@ -192,19 +238,32 @@
 }
 
 .font {
-    width: 400px;
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
-    font-weight: 5000;
 }
 
-.warna1 {
-    color: #ffffff;
+.font h2 {
+    position: fixed;
+    top: 33%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: 400px;
+}
+
+.font h3 {
+    position: fixed;
+    top: 33%;
+    right: 3.2%;
+    transform: translateY(-50%);
+    font-size: 33px;
+    width: 400px;
 }
 
 .warna2 {
+    font-weight: 600;
     color: #278700;
 }
+
 
 .form-container label {
     color: #278700;
@@ -238,24 +297,40 @@
     background-color: #278700;
 }
 
-.register-container {
+.login-container {
     position: fixed;
     top: 75%;
-    right: 10%;
+    right: 7.5%;
     transform: translateY(-50%);
 }
 
-.reg{
+.login-container p {
     color: #278700;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 300;
 }
 
-.shape {
+.register-container {
     position: fixed;
-    top: 71%;
-    right: 9.5%;
+    top: 75%;
+    right: 8.3%;
+    transform: translateY(-50%);
+}
+
+.register-container p {
+    color: #278700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+.line {
+    position: fixed;
+    top: 70.5%;
+    right: 7%;
     transform: translateY(-50%);
     width: 350px;
     height: 1px;
@@ -269,7 +344,6 @@
     left: 0px;
     right: 0;
     bottom: 0;
-
     display: flex;
     color: white;
     flex-direction: column;
@@ -277,4 +351,63 @@
     align-items: center;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-  }
+}
+
+.shape {
+    position: fixed;
+    top: 40%;
+    right: 85%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 600px;
+    background-color: #D4A52A;
+    border-radius:50%;
+    filter: blur(140px);
+}
+
+.shape1 {
+    position: fixed;
+    top: 115%;
+    right: 40%;
+    transform: translateY(-50%);
+    width: 800px;
+    height: 600px;
+    background-color: #006400;
+    border-radius:50%;
+    filter: blur(140px);
+}
+
+.image7 {
+    position: absolute;
+    top: 45%;
+    right: 4%;
+    transform: translateY(-50%);
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.shape2 {
+    position: fixed;
+    top: 40%;
+    right: 7%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background-color: #006400;
+    border-radius:50%;
+    filter: blur(90px);
+}
+
+.shape3 {
+    position: fixed;
+    top: 100%;
+    left: 88%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background-color: #D4A52A;
+    border-radius:50%;
+    filter: blur(90px);
+}
