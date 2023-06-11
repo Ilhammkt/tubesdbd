@@ -4,7 +4,7 @@
 <head>
     <title>Kantin Kuy!</title>
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
         #makanan {
@@ -21,14 +21,14 @@
         <a class="shape1"></a>
         <a class="shape2"></a>
         <a class="shape3"></a>
-        <img src="css/gambarawal.svg" class="image7">
+        <img src="../css/gambarawal.svg" class="image7">
         <div class="title" id="scrollberanda">
             <h3>Makan &</h3>
             <h4>Minum dengan</h4>
             <h5>Cita Rasa Bintang Lima</h5>
             
         </div>
-        <img class="logo" src="css/logo.png"></li>
+        <img class="logo" src="../css/logo.png"></li>
         <div class="navbar">
             <ul>
                 <li><a href="#beranda">Beranda</a></li>

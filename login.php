@@ -10,8 +10,7 @@
 
 <style>
     body {
-        background-image: url(css/bg2.svg);
-        /* Ganti dengan jalur/gambar yang sesuai */
+        background-image: url(css/bglogreg.svg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -38,13 +37,13 @@
         </form>
     </div>
 
-    <div class="register-container">
-        <p class="reg">
-            Tidak punya akun? <a href="register.php" class="warna1">Mendaftar ke Kantin Kuy!</a>
+    <div class="login-container">
+        <p>
+            Tidak punya akun? <a href="register.php" class="text-white">Mendaftar ke Kantin Kuy!</a>
         </p>
     </div>
 
-    <div class="shape"></div>
+    <div class="line"></div>
 
     <?php
     session_start();
@@ -64,15 +63,14 @@
             if (strcmp($user_data['type'],"admin") == 0) {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: admin/dashboard_admin.php');
+                header('Location: admin/halamanadmin.php');
             }
             else {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: user/dashboard_user.php');
+                header('Location: user/halamanuser.php');
             }
 
-            
         } else {
             ?>
             <div class="alert alert-warning col-2 mt-3 ms-3" role="alert">
