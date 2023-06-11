@@ -5,12 +5,12 @@
     <title>Kantin Kuy!</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <style>
     body {
-        background-image: url(css/bglogreg.svg);
+        background-image: url(css/bg2.svg);
+        /* Ganti dengan jalur/gambar yang sesuai */
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -18,16 +18,14 @@
 
 <body>
     <img src="css/enak3.png" class="image6">
-    <div>
-        <div class="font">
-            <h2>
-                <?php
-                echo '<span class="text-white">' . "Masuk ke" . '</span> <span class="warna2">' . "Kantin Kuy!" . '</span>';
-                ?>
-            </h2>
-        </div>
-        <form class="form-container" action="#" method="POST">
-            <label for="username">Nama Pengguna :</label>
+    <div class="form-container">
+        <h2 class="font">
+            <?php
+            echo '<span class="warna1">' . "Masuk ke" . '</span> <span class="warna2">' . "Kantin Kuy!" . '</span>';
+            ?>
+        </h2>
+        <form action="#" method="POST">
+            <label for="username">Nama Pengguna/Email :</label>
             <input type="text" id="username" name="username" required><br><br>
 
             <label for="password">Kata Sandi :</label>
@@ -37,13 +35,13 @@
         </form>
     </div>
 
-    <div class="login-container">
-        <p>
-            Tidak punya akun? <a href="register.php" class="text-white">Mendaftar ke Kantin Kuy!</a>
+    <div class="register-container">
+        <p class="reg">
+            Tidak punya akun? <a href="register.php" class="warna1">Mendaftar ke Kantin Kuy!</a>
         </p>
     </div>
 
-    <div class="line"></div>
+    <div class="shape"></div>
 
     <?php
     session_start();
@@ -63,20 +61,18 @@
             if (strcmp($user_data['type'],"admin") == 0) {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: admin/halamanadmin.php');
+                header('Location: admin/dashboard_admin.php');
             }
             else {
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['id'] = $user_data['id'];
-                header('Location: user/halamanuser.php');
+                header('Location: user/dashboard_user.php');
             }
 
+            
         } else {
-            ?>
-            <div class="alert alert-warning col-2 mt-3 ms-3" role="alert">
-                Nama Pengguna atau Kata Sandi salah.
-            </div>
-            <?php
+            // Login gagal
+            echo "<p>Login gagal</p>";
         }
     }
     ?>
