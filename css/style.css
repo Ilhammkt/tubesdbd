@@ -121,7 +121,7 @@
 .image6 {
     max-width: 850px;
     max-height: 850px;
-    position: absolute;
+    position: fixed;
     top: 65%;
     right: 60%;
     transform: translateY(-50%);
@@ -230,7 +230,7 @@
 .form-container {
     position: fixed;
     top: 50%;
-    right: 9%;
+    right: 7%;
     transform: translateY(-50%);
     width: 350px;
     margin: 10px auto;
@@ -238,17 +238,29 @@
 }
 
 .font {
-    width: 400px;
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
-    font-weight: 5000;
 }
 
-.warna1 {
-    color: #ffffff;
+.font h2 {
+    position: fixed;
+    top: 33%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: 400px;
+}
+
+.font h3 {
+    position: fixed;
+    top: 33%;
+    right: 3.2%;
+    transform: translateY(-50%);
+    font-size: 33px;
+    width: 400px;
 }
 
 .warna2 {
+    font-weight: 600;
     color: #278700;
 }
 
@@ -285,27 +297,37 @@
     background-color: #278700;
 }
 
-.register-container {
+.login-container {
     position: fixed;
     top: 75%;
-    right: 10%;
+    right: 7.5%;
     transform: translateY(-50%);
 }
 
-.register-container p a :hover {
-    background-color: #278700;
-}
-
-.register-container p {
+.login-container p {
     color: #278700;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 300;
 }
 
-.line {
+.register-container {
     position: fixed;
-    top: 70.5%;
+    top: 75%;
+    right: 8.3%;
+    transform: translateY(-50%);
+}
+
+.reg{
+    color: #278700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.shape {
+    position: fixed;
+    top: 71%;
     right: 9.5%;
     transform: translateY(-50%);
     width: 350px;
@@ -327,64 +349,4 @@
     align-items: center;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-}
-
-.shape {
-    position: fixed;
-    top: 40%;
-    right: 85%;
-    transform: translateY(-50%);
-    width: 500px;
-    height: 600px;
-    background-color: #D4A52A;
-    border-radius:50%;
-    filter: blur(140px);
-}
-
-.shape1 {
-    position: fixed;
-    top: 115%;
-    right: 40%;
-    transform: translateY(-50%);
-    width: 800px;
-    height: 600px;
-    background-color: #006400;
-    border-radius:50%;
-    filter: blur(140px);
-}
-
-.image7 {
-    position: absolute;
-    top: 45%;
-    right: 4%;
-    transform: translateY(-50%);
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-}
-
-.shape2 {
-    position: fixed;
-    top: 40%;
-    right: 7%;
-    transform: translateY(-50%);
-    width: 500px;
-    height: 500px;
-    background-color: #006400;
-    border-radius:50%;
-    filter: blur(90px);
-}
-
-.shape3 {
-    position: fixed;
-    top: 100%;
-    left: 88%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 300px;
-    background-color: #D4A52A;
-    border-radius:50%;
-    filter: blur(90px);
-}
-
+  }

@@ -5,6 +5,7 @@
     <title>Kantin Kuy!</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <style>
@@ -17,14 +18,16 @@
 
 <body>
     <img src="css/enak3.png" class="image6">
-    <div class="form-container">
-        <h2 class="font">
-            <?php
-            echo '<span class="warna1">' . "Masuk ke" . '</span> <span class="warna2">' . "Kantin Kuy!" . '</span>';
-            ?>
-        </h2>
-        <form action="#" method="POST">
-            <label for="username">Nama Pengguna/Email :</label>
+    <div>
+        <div class="font">
+            <h2>
+                <?php
+                echo '<span class="text-white">' . "Masuk ke" . '</span> <span class="warna2">' . "Kantin Kuy!" . '</span>';
+                ?>
+            </h2>
+        </div>
+        <form class="form-container" action="#" method="POST">
+            <label for="username">Nama Pengguna :</label>
             <input type="text" id="username" name="username" required><br><br>
 
             <label for="password">Kata Sandi :</label>
@@ -35,7 +38,7 @@
     </div>
 
     <div class="register-container">
-        <p>
+        <p class="reg">
             Tidak punya akun? <a href="register.php" class="warna1">Mendaftar ke Kantin Kuy!</a>
         </p>
     </div>
@@ -58,11 +61,15 @@
         if (mysqli_num_rows($result) > 0) {
             // Data pengguna ditemukan, set session dan redirect ke halaman lain
             $_SESSION['username'] = $username;
-            header('Location: halamanuser.php');
+            header('Location: admin/halaman.php');
 
+            
         } else {
-            // Login gagal
-            echo "<p>Login gagal</p>";
+            ?>
+            <div class="alert alert-warning col-2 mt-3 ms-3" role="alert">
+                Nama Pengguna atau Kata Sandi salah.
+            </div>
+            <?php
         }
     }
     ?>
