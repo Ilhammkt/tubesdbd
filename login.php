@@ -56,10 +56,18 @@
         $result = mysqli_query($koneksi, $query);
 
         // Memeriksa hasil query
-        if (mysqli_num_rows($result) > 0) {
-            // Data pengguna ditemukan, set session dan redirect ke halaman lain
-            $_SESSION['username'] = $username;
-            header('Location: admin/halaman.php');
+        if ($user_data = mysqli_fetch_array($result) /*mysqli_num_rows($result) > 0*/) {
+            // Data pengguna ditemukan, set session dan redirect ke halaman 
+            if (strcmp($user_data['type'],"admin") == 0) {
+                $_SESSION['username'] = $user_data['username'];
+                $_SESSION['id'] = $user_data['id'];
+                header('Location: admin/dashboard_admin.php');
+            }
+            else {
+                $_SESSION['username'] = $user_data['username'];
+                $_SESSION['id'] = $user_data['id'];
+                header('Location: user/dashboard_user.php');
+            }
 
             
         } else {

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+include_once('../config.php');
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +19,12 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <h2> <img src="C:\xampp\htdocs\phpdasar\tubesdbd\admin\logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    BANGGGG PUSINGGG BANG</h2>
+                    <h2> <img src="C:\xampp\htdocs\phpdasar\tubesdbd\admin\logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    BANGGGG PUSINGGG BANG users ini</h2>
+                    <?php
+                    session_start();
+                    print_r($_SESSION);
+                    ?>
                 </a>
              </div>
         </nav>
