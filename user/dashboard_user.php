@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php
+include_once('../config.php');
+session_start();
+$username=$_SESSION['username'];
+?>
 
 <head>
     <title>Kantin Kuy!</title>
@@ -16,6 +21,7 @@
 
 
 <body>
+    
     <div class="konten">
         <a class="shape"></a>
         <a class="shape1"></a>
@@ -23,7 +29,9 @@
         <a class="shape3"></a>
         <img src="../css/gambarawal.svg" class="image7">
         <div class="title" id="scrollberanda">
-            <h3>Makan &</h3>
+            <?php
+            echo "<h3> Hallo ".$username."</h3>";
+            ?>
             <h4>Minum dengan</h4>
             <h5>Cita Rasa Bintang Lima</h5>
             
@@ -32,9 +40,9 @@
         <div class="navbar">
             <ul>
                 <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#makanan">Makanan</a></li>
-                <li><a href="#minuman">Minuman</a></li>
-                <li><a href="#">Kontak</a></li>
+                <?php
+                echo "<li><a href='pilih_makanan.php'>Makanan</a></li>"
+                ?>
             </ul>
         </div>
         <div id="makanan">

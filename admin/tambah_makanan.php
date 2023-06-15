@@ -36,6 +36,11 @@ $result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
                 <td><input type="number" name="stok"></td>
             </tr>
             <tr>
+                <td>ketersediaan</td>
+                <td><input type="radio" name="avail" value='ready'>Ready</td>
+                <td><input type="radio" name="avail" value='not_ready'>Not Available</td>
+            </tr>
+            <tr>
                 <td></td>
                 <td><input type="submit" name="Submit" value="Add"></td>
             </tr>
@@ -51,9 +56,10 @@ $result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
         $id_cate = $_POST['id_category'];
         $harga = $_POST['harga'];
         $stok = $_POST['stok'];
+        $avail = $_POST['avail'];
 
         // Insert user data into table
-        $result = mysqli_query($koneksi, "INSERT INTO tabel_makanan(nama,decs,id_category,harga,stok) VALUES('$nama','$decs','$id_cate','$harga','$stok')");
+        $result = mysqli_query($koneksi, "INSERT INTO tabel_makanan(nama,decs,id_category,harga,stok,avail) VALUES('$nama','$decs','$id_cate','$harga','$stok','$avail')");
 
         // Show message when user added
         echo "Food added successfully.";
