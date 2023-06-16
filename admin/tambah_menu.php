@@ -3,18 +3,28 @@
 <?php
 include_once('../config.php');
 session_start();
-$result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
+$result = mysqli_query($koneksi, "SELECT * FROM tabel_menu");
 ?>
 
 <html lang="en">
+
 <head>
-    <title>Tambah Makanan - Admin</title>
+    <title>Tambah Menu - Admin</title>
+
+    <style>
+        body {
+            background-image: url(../css/bgsemua.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
+
 <body>
     <a href="dashboard_admin.php">Back.</a>
     </br>
-    <form action="tambah_makanan.php" method="post" name="form_makanan">
-        <table width="25%" border="0">
+    <form action="tambah_menu.php" method="post" name="form_menu">
+        <table width="25%">
             <tr>
                 <td>Nama</td>
                 <td><input type="text" name="nama"></td>
@@ -50,7 +60,7 @@ $result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
     <?php
 
     // Check If form submitted, insert form data into users table.
-    if(isset($_POST['Submit'])) {
+    if (isset($_POST['Submit'])) {
         $nama = $_POST['nama'];
         $decs = $_POST['decs'];
         $id_cate = $_POST['id_category'];
@@ -59,7 +69,7 @@ $result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
         $avail = $_POST['avail'];
 
         // Insert user data into table
-        $result = mysqli_query($koneksi, "INSERT INTO tabel_makanan(nama,decs,id_category,harga,stok,avail) VALUES('$nama','$decs','$id_cate','$harga','$stok','$avail')");
+        $result = mysqli_query($koneksi, "INSERT INTO tabel_menu(nama,decs,id_category,harga,stok,avail) VALUES('$nama','$decs','$id_cate','$harga','$stok','$avail')");
 
         // Show message when user added
         echo "Food added successfully.";
@@ -67,4 +77,5 @@ $result= mysqli_query($koneksi,"SELECT * FROM tabel_makanan");
     }
     ?>
 </body>
+
 </html>
