@@ -67,7 +67,8 @@
             <?php
         } else {
             // Query untuk menyimpan data pengguna ke dalam database
-            $query = "INSERT INTO user_kantin (username, password) VALUES ('$username', '$password')";
+            $type="user";
+            $query = "INSERT INTO user_kantin (username, password,type) VALUES ('$username', '$password','$type')";
             $result = mysqli_query($koneksi, $query);
 
             // Memeriksa hasil query
